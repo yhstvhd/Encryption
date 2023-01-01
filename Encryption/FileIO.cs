@@ -20,7 +20,7 @@ namespace Encryption
         public static void Write(string text,string path = path)
         {
             //上書きモードでファイル書き出し
-            using (var writer = new StreamWriter(path, true))
+            using (var writer = new StreamWriter(path, false,Encoding.UTF8))
             {
                 writer.WriteLine(text);
             }
@@ -39,6 +39,5 @@ namespace Encryption
                 return text;
             }
         }
-
     }
 }

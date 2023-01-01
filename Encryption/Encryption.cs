@@ -86,7 +86,6 @@ namespace Encryption
         /// <returns>復号文</returns>
         public static string Decode(string cipher)
         {
-
             using (var rijndael = new RijndaelManaged())
             {
                 //暗号化サイズ、AES256設定
